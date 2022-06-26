@@ -1,0 +1,25 @@
+start_year: 2020
+end_year: 2070
+net_zero_year: null
+final_energy_intensity: 1 #MWh/person/yr
+final_energy_intensity_gr:
+    max_rate: 0.04
+    min_rate: 0.005
+    peak_year: 2030
+    half_decay: 2050
+population_gr:
+    max_rate: 0.015
+    min_rate: 0.003
+    peak_year: 2025
+    half_decay: 2040
+initial_technologies:
+    - ob_type: node
+      ob_key: NODE_A
+      tech_type: coal_thermal
+      capacity: 15
+      age: 15
+    - ob_type: edge
+      ob_key: [NODE_A,NODE_B]
+      tech_type: distribution
+      capacity: 15
+      age: 20
