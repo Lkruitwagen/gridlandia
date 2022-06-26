@@ -4,8 +4,6 @@ services:
     image: gurobi/optimizer:latest
     volumes:
       - ./gurobi.lic:/opt/gurobi/gurobi.lic:ro
-    expose:
-      - 5000:5000
   jupyter:
     image: jupyter/datascience-notebook:latest
     container_name: jupyter
