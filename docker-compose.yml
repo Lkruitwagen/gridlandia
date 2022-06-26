@@ -1,0 +1,17 @@
+version: '3.7'
+services:
+  gurobi:
+    image: gurobi/optimizer:latest
+    volumes:
+      - ./gurobi.lic:/opt/gurobi/gurobi.lic:ro
+    expose:
+      - 5000:5000
+  jupyter:
+    image: jupyter/datascience-notebook:latest
+    container_name: jupyter
+    ports:
+      - 8888:8888
+      - 5000:5000
+    environment:
+      JUPYTER_ENABLE_LAB: "yes"
+      JUPYTER_TOKEN: "docker"

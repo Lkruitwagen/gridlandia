@@ -10,6 +10,8 @@ __version__ = "0.0.1"
 
 def create_app():
     app = Flask(__name__)
+    
+    app.config['ENV'] = os.environ.get('ENV','development')
     # app.config.from_object("config")
     if app.config["ENV"] == "development":
         app.config["LOGIN_DISABLED"] = False
