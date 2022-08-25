@@ -1,0 +1,27 @@
+utility_solar:
+    emissions_rate: 0
+    area_footprint: 0.0339 # 11300/1000/1000*3 sqkm/MW (covered_area * tot_area_fac)
+    capital_cost_var:  4e6 # $/MW + land costs
+    capital_cost_fixed: 5e5 # $/yr
+    capital_cost_gr: -0.1
+    opex: 0
+    lifespan: 40
+
+distributed_solar:
+    emissions_rate: 0
+    area_footprint: 0
+    capital_cost_var: 6000000 # $/MW
+    capital_cost_fixed: 1.e3
+    capital_cost_gr: -0.1
+    opex: 0
+    lifespan: 30
+
+coal_thermal:
+    construction_lead_years: 5
+    emissions_rate: 8760 # 1t/MWh*8760hrs
+    area_footprint: 0
+    capital_cost_var: 600000 # $/MW
+    capital_cost_fixed: 1.e6
+    capital_cost_gr: 0.
+    opex: 26.829 #*8760, # $/MW_e/yr
+    lifespan: 35
